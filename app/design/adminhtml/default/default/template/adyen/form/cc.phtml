@@ -189,7 +189,7 @@ $originKey = $this->getOriginKey();
     }
 
     function polyFill() {
-        if (Array.prototype.filter) {
+        if (!Array.prototype.filter) {
             Array.prototype.filter = function (func, thisArg) {
                 'use strict';
                 if (!((typeof func === 'Function' || typeof func === 'function') && this))
